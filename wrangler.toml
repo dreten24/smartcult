@@ -1,5 +1,0 @@
-name = "smartcult-api"
-main = "src/index.ts"
-compatibility_date = "2024-05-01"
-[vars]
-APP_NAME = "Smart Cult API"
