@@ -1,0 +1,24 @@
+{
+  "updated": "2025-09-25",
+  "components": [
+    {
+      "name": "API (Cloudflare Worker)",
+      "id": "api",
+      "status": "unknown",
+      "url": "https://api.smartcult.online/api/health"
+    },
+    {
+      "name": "Frontend (v0.app/Pages)",
+      "id": "frontend",
+      "status": "unknown",
+      "url": "https://smartcult.online"
+    },
+    {
+      "name": "Docs",
+      "id": "docs",
+      "status": "unknown",
+      "url": "."
+    }
+  ],
+  "incidents": []
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Deploy (GUI)</title>
+<link rel="stylesheet" href="assets/styles.css"/>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+<header><div><strong>$SMARTCULT</strong> Docs</div><nav><a href="index.html">Home</a><a href="whitepaper.html">Whitepaper</a><a href="status.html">Status</a></nav></header>
+<main>
+  <div class="card">
+    <div id="content"></div>
+  </div>
+</main>
+<div class="footer">© 2025 Smart Cult — smartcult.online</div>
+<script>
+const md = "# GUI-Only Deployment Guide \u2014 Explorers & Bridges (PoW EVM)\n**Date:** 2025-09-25\n\n## A) Block Explorer (GUI Options)\n### Option 1 \u2014 Managed Explorer (no-code setup)\n- Choose a managed EVM explorer provider.\n- Provide: chain name (e.g., Smart DOGE EVM), chain ID, RPC URL(s), genesis hash, native currency symbol, block time.\n- Upload a logo and color theme; enable **Contract Verification** UI.\n- Add your token addresses (SMARTCULT, sDOGE, sBTC, sETH, sSOL, sAVAX, sLTC) to the token list, and enable ERC\u201120 tracking.\n- Turn on **API Keys** for dApps and your web app; test `/api` endpoints from their dashboard.\n\n### Option 2 \u2014 Self-hosted Explorer with Web UI\n- Use a one-click template (Docker UI) from your explorer vendor.\n- In the web admin:\n  - Enter RPC endpoint, chain metadata, and indexing start block.\n  - Enable verified sources: point to your contract repo or upload source ZIPs for verification.\n  - Configure rate limits and CORS in the settings UI.\n- Point `explorer.smartcult.online` to your explorer domain via DNS (proxied).\n\n## B) Bridge / Cross-Chain Swap Aggregation (GUI-first)\n- Choose a bridge/aggregator with a **dashboard configurator**.\n- In their UI:\n  1. Register a project \u2192 add **Chains** (your SUCs + any L1/L2 routes).\n  2. Add **Routes** and **Limits** per chain (align with your Bridge Registry params).\n  3. Configure **Fee** and **Slippage** policies.\n  4. Generate an **Embed Widget** (iframe/script) for your web app, or retrieve REST endpoints.\n- Security: Set **per-route caps** consistent with your PoW chain work (hashrate/difficulty); use allowlists in early beta.\n\n## C) Wallet & Chainlist (GUI)\n- Submit each SUC chain to chain list registries via their forms (name, chainId, RPCs, explorer URL).\n- Provide JSON metadata and icons. Test adding the network in MetaMask/compatible wallets via a \u201c**Add Network**\u201d button on your docs site.\n\n## D) Contract Verification (GUI)\n- Use explorer\u2019s **Verify Contract** page.\n- Select compiler version `0.8.24`, optimization ON (runs 200).\n- Paste constructor args from your deploy logs (token name, symbol, treasury, initialMint).\n- Verify **VestingVault** and **MerkleAirdrop** similarly.\n\n## E) Status Page (GUI)\n- Host `status.smartcult.online` on Cloudflare Pages.\n- The included `status.html` pings your API `/api/health` and renders component cards.\n- Edit `status.json` to reflect live components and incidents.\n";
+document.getElementById('content').innerHTML = marked.parse(md);
+</script>
+</body></html>

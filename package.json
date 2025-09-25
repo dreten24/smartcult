@@ -1,0 +1,13 @@
+{
+  "name": "suc-token",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.22.0"
+  },
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile"
+  }
+}

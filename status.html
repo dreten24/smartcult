@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Status — Smart Cult</title>
+<link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+<header><div><strong>$SMARTCULT</strong> Status</div><nav><a href="index.html">Docs</a></nav></header>
+<main>
+  <div class="card">
+    <h2>Live Components</h2>
+    <div id="grid" class="grid"></div>
+    <p class="small">Status file last updated from <code>status.json</code>. The API component also pings <code>/api/health</code>.</p>
+  </div>
+</main>
+<div class="footer">© Smart Cult</div>
+<script>
+async function load() {
+  const grid = document.getElementById('grid');
+  const res = await fetch('status.json', { cache: 'no-store' });
+  const data = await res.json();
+  for (const c of data.components) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `<h3>${c.name}</h3>
+      <div class="small">ID: ${c.id}</div>
+      <div class="small">URL: <a href="${c.url}" target="_blank">${c.url}</a></div>
+      <div class="small" id="s-${c.id}">Status: ${c.status}</div>`;
+    grid.appendChild(card);
+    if (c.id === 'api') {
+      fetch(c.url).then(r=>r.json()).then(j=>{
+        document.getElementById('s-api').textContent = 'Status: ' + (j.ok ? 'ok' : 'degraded');
+      }).catch(_=>{
+        document.getElementById('s-api').textContent = 'Status: unreachable';
+      })
+    }
+  }
+}
+load();
+</script>
+</body></html>

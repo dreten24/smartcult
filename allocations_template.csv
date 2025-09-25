@@ -1,0 +1,8 @@
+wallet,label,amount_token_units,cliff_months,vesting_months
+0xYOURCOMMUNITY1,Community,250000000,0,36
+0xYOURCOMMUNITY2,Community,100000000,6,36
+0xYOURBUILDERS1,Builders,200000000,6,48
+0xYOURVALIDATOR1,Validators/Relayers,150000000,0,48
+0xYOURPOL1,ProtocolOwnedLiquidity,150000000,0,0
+0xYOURSTRATEGIC1,Strategic,100000000,3,36
+0xYOURTREASURY1,Treasury,50000000,0,0

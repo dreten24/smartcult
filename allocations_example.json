@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "version": "2025-09-25",
+    "note": "Replace addresses with real wallets. Sums should equal 1,000,000,000 token units (18 decimals assumed for ERC-20)."
+  },
+  "allocations": [
+    {
+      "wallet": "0x1111111111111111111111111111111111111111",
+      "label": "Community",
+      "amount_token_units": "250000000000000000000000000",
+      "cliff_months": 0,
+      "vesting_months": 36
+    },
+    {
+      "wallet": "0x2222222222222222222222222222222222222222",
+      "label": "Community",
+      "amount_token_units": "100000000000000000000000000",
+      "cliff_months": 6,
+      "vesting_months": 36
+    },
+    {
+      "wallet": "0x3333333333333333333333333333333333333333",
+      "label": "Builders",
+      "amount_token_units": "200000000000000000000000000",
+      "cliff_months": 6,
+      "vesting_months": 48
+    },
+    {
+      "wallet": "0x4444444444444444444444444444444444444444",
+      "label": "Validators/Relayers",
+      "amount_token_units": "150000000000000000000000000",
+      "cliff_months": 0,
+      "vesting_months": 48
+    },
+    {
+      "wallet": "0x5555555555555555555555555555555555555555",
+      "label": "ProtocolOwnedLiquidity",
+      "amount_token_units": "150000000000000000000000000",
+      "cliff_months": 0,
+      "vesting_months": 0
+    },
+    {
+      "wallet": "0x6666666666666666666666666666666666666666",
+      "label": "Strategic",
+      "amount_token_units": "100000000000000000000000000",
+      "cliff_months": 3,
+      "vesting_months": 36
+    },
+    {
+      "wallet": "0x7777777777777777777777777777777777777777",
+      "label": "Treasury",
+      "amount_token_units": "50000000000000000000000000",
+      "cliff_months": 0,
+      "vesting_months": 0
+    }
+  ]
+}
